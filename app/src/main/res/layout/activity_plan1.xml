@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanActivity1">
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClick"
+        android:text="> Next" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="여행 Plan 짜기!"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/txtBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="예산 범위" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtBudget"
+        android:padding="10dp"
+        android:background="#DDFFFF">
+
+        <EditText
+            android:id="@+id/txtMin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="￦ "
+            android:maxLength="25"
+            android:textColor="@android:color/darker_gray"
+            android:inputType="number"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/txtWave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="     ~ "
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/txtMax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="￦ "
+            android:maxLength="25"
+            android:textColor="@android:color/darker_gray"
+            android:inputType="number"
+            android:background="@drawable/rectangle"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBudget"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:text="인원"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/txtPeople"
+        android:padding="10dp"
+        android:background="#DDFFFF">
+
+        <TextView
+            android:id="@+id/txtAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:text="성인" />
+
+        <Button
+            android:id="@+id/btnAdultDown"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/txtAdult"
+            android:text="-"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/txtAdultNum"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnAdultDown"
+            android:gravity="center"
+            android:text="0"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAdultUp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/txtAdultNum"
+            android:text="+"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/txtAdult"
+            android:text="아동" />
+
+        <Button
+            android:id="@+id/btnChildDown"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/btnAdultDown"
+            android:layout_toRightOf="@id/txtChildren"
+            android:text="-"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/txtChildNum"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/txtAdultNum"
+            android:layout_toRightOf="@id/btnChildDown"
+            android:gravity="center"
+            android:text="0"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnChildUp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/btnAdultUp"
+            android:layout_toRightOf="@id/txtChildNum"
+            android:text="+"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPeople"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:text="날짜"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtDay"
+        android:background="#DDFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:text="여행날짜" />
+
+        <ImageView
+            android:id="@+id/imgCalendar"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/icon_calendar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtThema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:text="테마"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/txtThema"
+        android:padding="10dp"
+        android:background="#DDFFFF">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacing="8dp"
+            app:singleSelection="false">
+        </com.google.android.material.chip.ChipGroup>
+    </ScrollView>
+
+</RelativeLayout>
