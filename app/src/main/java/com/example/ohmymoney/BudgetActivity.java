@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class BudgetActivity extends Activity {
     private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
