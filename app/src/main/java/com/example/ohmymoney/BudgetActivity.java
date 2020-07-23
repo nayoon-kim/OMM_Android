@@ -17,6 +17,7 @@ public class BudgetActivity extends Activity {
     private TableLayout tableLayout;
     private TextView textView_personal_price;
     private TextView textView_total_price;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
