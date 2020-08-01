@@ -14,6 +14,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,6 +35,7 @@ public class BudgetActivity extends Activity {
     private RecyclerView recyclerView;
     private List<Budget> budgetList;
 
+    private CardView cardView;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -65,8 +67,11 @@ public class BudgetActivity extends Activity {
         stickyScrollView = (StickyScrollView) findViewById(R.id.sticky_scrollview);
 
         budgetList = new ArrayList<Budget>();
+
+        cardView = (CardView) findViewById(R.id.budget_cardview);
     }
     private void settings(){
+        // button 클릭에 대한 설정
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -76,6 +81,7 @@ public class BudgetActivity extends Activity {
             }
         });
 
+        // stickyScrollView의 정확한 구현을 위한 설정
         recyclerView.setNestedScrollingEnabled(false);
         stickyScrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -132,6 +138,7 @@ public class BudgetActivity extends Activity {
                 return false;
             }
         });
+
     }
     private void set_price_table(HashMap<String, Integer> detail_price){
 
