@@ -14,6 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/linear_style"
         android:onClick="onClick"
         android:text="> Next" />
 
@@ -42,7 +43,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/txtBudget"
         android:padding="10dp"
-        android:background="#DDFFFF">
+        android:background="@color/colorPrimary">
 
         <EditText
             android:id="@+id/txtMin"
@@ -92,7 +93,7 @@
         android:layout_height="80dp"
         android:layout_below="@id/txtPeople"
         android:padding="10dp"
-        android:background="#DDFFFF">
+        android:background="@color/colorPrimary">
 
         <TextView
             android:id="@+id/txtAdult"
@@ -182,7 +183,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/txtDay"
-        android:background="#DDFFFF"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
         <TextView
@@ -220,7 +221,7 @@
         android:layout_height="150dp"
         android:layout_below="@id/txtThema"
         android:padding="10dp"
-        android:background="#DDFFFF">
+        android:background="@color/colorPrimary">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
