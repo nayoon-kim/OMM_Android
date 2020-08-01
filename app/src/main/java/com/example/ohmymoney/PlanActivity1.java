@@ -169,7 +169,7 @@ class DateOfTrip {
     }
 
     public String getDate() {
-        return year + "년 " + (month + 1) + "월 " + day + " 일";
+        return year + "년 " + (month + 1) + "월 " + day + "일";
     }
 
     public int getYear() { return this.year; }
