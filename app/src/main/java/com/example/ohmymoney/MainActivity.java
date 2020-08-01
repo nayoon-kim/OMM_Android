@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         btnScheduling.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BudgetActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PlanActivity1.class);
                 startActivity(intent);
             }
         });
@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         btnBudget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BudgetActivity.class);
+                startActivity(intent);
             }
         });
     }

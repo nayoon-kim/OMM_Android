@@ -234,7 +234,7 @@
             android:layout_weight="3"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/cafe24oneprettynight"
-            app:srcCompat="@drawable/icon_calendar" />
+            android:src="@drawable/calendar"/>
 
     </LinearLayout>
 
