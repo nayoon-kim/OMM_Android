@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="장소 이름"
+            android:fontFamily="@font/cafe24oneprettynight"
             android:textSize="15dp"
             android:gravity="center_vertical"
             android:layout_marginBottom="4dp"
@@ -32,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="장소 디테일"
+            android:fontFamily="@font/cafe24oneprettynight"
             android:textSize="8dp"
             android:textColor="@color/grey"
             android:layout_weight="1" />
