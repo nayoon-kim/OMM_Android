@@ -2,17 +2,21 @@ package com.example.ohmymoney;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class NumberActivity extends Activity {
     private Button button;
-    private Button adult_plus_button;
-    private Button adult_minus_button;
-    private Button child_plus_button;
-    private Button child_minus_button;
+    private ImageButton adult_plus_button;
+    private ImageButton adult_minus_button;
+    private ImageButton child_plus_button;
+    private ImageButton child_minus_button;
 
     private TextView adult_number_text_view;
     private TextView child_number_text_view;
@@ -45,6 +49,7 @@ public class NumberActivity extends Activity {
         adult_number = 0;
         child_number = 0;
 
+
         adult_plus_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +60,11 @@ public class NumberActivity extends Activity {
         adult_minus_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                adult_number-=1;
+                if (adult_number == 0)
+                    adult_number = 0;
+                else
+                    adult_number-=1;
+
                 adult_number_text_view.setText(String.valueOf(adult_number));
 
             }
@@ -71,10 +80,14 @@ public class NumberActivity extends Activity {
         child_minus_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                child_number-=1;
+                if (child_number == 0)
+                    child_number = 0;
+                else
+                    child_number-=1;
                 child_number_text_view.setText(String.valueOf(child_number));
             }
         });
+
     }
 
 }

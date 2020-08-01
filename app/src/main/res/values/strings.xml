@@ -1,20 +1,21 @@
 <resources>
     <string name="app_name">OhMyMoney</string>
-    <string name="number_of_people">인원수는??</string>
+    <string name="number_of_people">인원수는?</string>
     <string name="adults">성인</string>
     <string name="children">아동</string>
     <string name="next">다음</string>
     <string name="total_budget">총 비용</string>
-    <string name="per_person_budget">1인당 비용</string>
+    <string name="per_person_budget">1인당 비용이 궁금하다면?</string>
     <string name="restaurant">음식점</string>
     <string name="leisure">레저</string>
-    <string name="tour_place">관광지</string>
+    <string name="tourist_spot">관광지</string>
     <string name="search_hint">?</string>
     <string name="family">가족</string>
     <string name="friend">친구</string>
     <string name="couple">커플</string>
     <string name="hotplace">핫플레이스</string>
     <string name="with_dog">개와 함께</string>
+    <string name="complete_choice">선택완료</string>
     <string-array name="company_names">
         <item>Mercury</item>
         <item>Naver</item>

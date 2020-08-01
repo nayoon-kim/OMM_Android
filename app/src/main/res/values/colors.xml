@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#ADD8C0</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="chipIconTint">#DDDDFF</color>
@@ -10,4 +10,5 @@
     <color name="crow">#34454E</color>
     <color name="lightGrey">#E2E2E2</color>
     <color name="grey">#A2A2A2</color>
+    <color name="color_Accent">#F78129</color>
 </resources>
