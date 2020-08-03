@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="chipIconTint">#DDDDFF</color>
+    <color name="colorPrimary">#C8E4D4</color>
+    <color name="colorPrimaryDark">#ADD8C0</color>
+    <color name="colorAccent">#F78129</color>
     <color name="lightGreen">#CADA3A</color>
-    <color name="paradiseGreen">#AED581</color>
+    <color name="green">#ABD394</color>
     <color name="emerald">#4DB6AC</color>
     <color name="crow">#34454E</color>
     <color name="lightGrey">#E2E2E2</color>
     <color name="grey">#A2A2A2</color>
+    <color name="color_Accent">#F78129</color>
+    <color name="babyPink">#FCDFCD</color>
+    <color name="yellow">#F8F3A1</color>
 </resources>

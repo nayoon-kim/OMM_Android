@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlanActivity1">
+    tools:context=".PlanActivity1"
+    android:background="@drawable/back">
 
     <Button
         android:id="@+id/btnNext"
@@ -15,6 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:onClick="onClick"
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:background="@drawable/button_number"
         android:text="> Next" />
 
     <TextView
@@ -23,9 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:text="여행 Plan 짜기!"
-        android:textSize="24dp"/>
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:textSize="30dp"/>
 
     <TextView
         android:id="@+id/txtBudget"
@@ -34,15 +38,17 @@
         android:layout_below="@id/txtTitle"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:textSize="18dp"
+        android:textColor="#000000"
         android:text="예산 범위" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/txtBudget"
-        android:padding="10dp"
-        android:background="#DDFFFF">
+        android:padding="10dp">
 
         <EditText
             android:id="@+id/txtMin"
@@ -84,31 +90,39 @@
         android:layout_below="@id/txtBudget"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:textSize="18dp"
+        android:textColor="#000000"
         android:text="인원"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_below="@id/txtPeople"
-        android:padding="10dp"
-        android:background="#DDFFFF">
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/txtAdult"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
+            android:fontFamily="@font/cafe24oneprettynight"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
             android:text="성인" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btnAdultDown"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@id/txtAdult"
             android:text="-"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:background="@drawable/ic_remove_circle_black_24dp"
+            android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
             android:id="@+id/txtAdultNum"
@@ -117,26 +131,34 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/btnAdultDown"
             android:gravity="center"
+            android:fontFamily="@font/cafe24oneprettynight"
             android:text="0"
-            android:textStyle="bold"/>
+            android:textSize="17dp"
+            android:textColor="#000000"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btnAdultUp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/txtAdultNum"
             android:text="+"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:background="@drawable/ic_add_circle_black_24dp"
+            android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
             android:id="@+id/txtChildren"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@id/txtAdult"
-            android:text="아동" />
+            android:fontFamily="@font/cafe24oneprettynight"
+            android:text="아동"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:textColor="#000000"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btnChildDown"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -144,7 +166,9 @@
             android:layout_below="@id/btnAdultDown"
             android:layout_toRightOf="@id/txtChildren"
             android:text="-"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:background="@drawable/ic_remove_circle_black_24dp"
+            android:backgroundTint="@color/colorPrimaryDark"/>
 
         <TextView
             android:id="@+id/txtChildNum"
@@ -154,10 +178,12 @@
             android:layout_below="@id/txtAdultNum"
             android:layout_toRightOf="@id/btnChildDown"
             android:gravity="center"
+            android:fontFamily="@font/cafe24oneprettynight"
             android:text="0"
-            android:textStyle="bold"/>
+            android:textSize="17dp"
+            android:textColor="#000000"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btnChildUp"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -165,7 +191,9 @@
             android:layout_below="@id/btnAdultUp"
             android:layout_toRightOf="@id/txtChildNum"
             android:text="+"
-            android:textSize="10dp" />
+            android:textSize="14dp"
+            android:background="@drawable/ic_add_circle_black_24dp"
+            android:backgroundTint="@color/colorPrimaryDark"/>
     </RelativeLayout>
 
     <TextView
@@ -175,14 +203,16 @@
         android:layout_below="@id/txtPeople"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:textSize="18dp"
+        android:textColor="#000000"
         android:text="날짜"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/txtDay"
-        android:background="#DDFFFF"
         android:orientation="horizontal">
 
         <TextView
@@ -192,16 +222,19 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:textSize="15dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/cafe24oneprettynight"
+            android:textColor="#000000"
             android:text="여행날짜" />
 
         <ImageView
             android:id="@+id/imgCalendar"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_marginTop="5dp"
-            app:srcCompat="@drawable/icon_calendar" />
+            android:fontFamily="@font/cafe24oneprettynight"
+            android:src="@drawable/calendar"/>
 
     </LinearLayout>
 
@@ -212,15 +245,17 @@
         android:layout_below="@id/txtDay"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
-        android:layout_marginBottom="10dp"
-        android:text="테마"/>
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cafe24oneprettynight"
+        android:text="테마"
+        android:textSize="18dp"
+        android:textColor="#000000"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@id/txtThema"
-        android:padding="10dp"
-        android:background="#DDFFFF">
+        android:padding="10dp">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"

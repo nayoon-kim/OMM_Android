@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ import java.util.Calendar;
 
 public class PlanActivity1 extends AppCompatActivity {
     private EditText txtMin, txtMax;
-    private Button btnAdultUp, btnAdultDown, btnChildUp, btnChildDown;
+    private ImageButton btnAdultUp, btnAdultDown, btnChildUp, btnChildDown;
     private TextView txtAdultNum, txtChildNum, txtDate;
     private ImageView imgCalendar;
     private ChipGroup chipGroup;
@@ -60,10 +61,10 @@ public class PlanActivity1 extends AppCompatActivity {
         txtMax = (EditText)findViewById(R.id.txtMax);
         txtAdultNum = (TextView)findViewById(R.id.txtAdultNum);
         txtChildNum = (TextView)findViewById(R.id.txtChildNum);
-        btnAdultDown = (Button)findViewById(R.id.btnAdultDown);
-        btnAdultUp = (Button)findViewById(R.id.btnAdultUp);
-        btnChildDown = (Button)findViewById(R.id.btnChildDown);
-        btnChildUp = (Button)findViewById(R.id.btnChildUp);
+        btnAdultDown = (ImageButton)findViewById(R.id.btnAdultDown);
+        btnAdultUp = (ImageButton)findViewById(R.id.btnAdultUp);
+        btnChildDown = (ImageButton)findViewById(R.id.btnChildDown);
+        btnChildUp = (ImageButton)findViewById(R.id.btnChildUp);
         txtDate = (TextView)findViewById(R.id.txtDate);
         imgCalendar = (ImageView)findViewById(R.id.imgCalendar);
         chipGroup = (ChipGroup)findViewById(R.id.chipGroup);
@@ -169,7 +170,7 @@ class DateOfTrip {
     }
 
     public String getDate() {
-        return year + "년 " + (month + 1) + "월 " + day + " 일";
+        return year + "년 " + (month + 1) + "월 " + day + "일";
     }
 
     public int getYear() { return this.year; }
