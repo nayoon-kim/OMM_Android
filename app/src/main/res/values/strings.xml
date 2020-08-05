@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">OhMyMoney</string>
-    <string name="Kakao_app_key">8fd4c4c35a90b005c51e1c8350bde3ed</string>
-    <string name="facebook_app_id">627004767931999</string>
-    <string name="fb_login_protocol_scheme">fb627004767931999</string>
-    <string name="number_of_people">인원수는??</string>
+    <string name="number_of_people">인원수는?</string>
+    <string name="Kakao_app_key">앱 키</string>
     <string name="adults">성인</string>
     <string name="children">아동</string>
     <string name="next">다음</string>

@@ -1,78 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com.tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="로그인"
-        android:textSize="50dp"/>
-
-    <EditText
-        android:id="@+id/et_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="아이디"
-        android:inputType="textPersonName"/>
-
-    <EditText
-        android:id="@+id/et_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="패스워드"
-        android:inputType="textPersonName"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="로그인"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="회원가입"/>
-
-    </LinearLayout>
-
-    <com.kakao.usermgmt.LoginButton
-        android:id="@+id/btn_kakao_login"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="30dp"/>
-
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btn_facebook_login"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_google_login"
-        android:layout_width="260dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="10dp"/>
-
-</LinearLayout>
-
-<!--<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -137,4 +64,3 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
--->
