@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -41,31 +42,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Log.e("getKeyHash", ""+getKeyHash(MainActivity.this));
+        mBottomNV = findViewById(R.id.nav_view);
+        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){ //NavigationItemSelected
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
+                BottomNavigate(menuItem.getItemId());
+                return true;
+            }
+        });
+
+        mBottomNV.setSelectedItemId(R.id.navigation_2);
+
         this.getViewObject();
         this.initListener();
-    }
-
-    public static String getKeyHash(final Context context) {
-        PackageManager pm = context.getPackageManager();
-        try {
-            PackageInfo packageInfo = pm.getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
-            if (packageInfo == null)
-                return null;
-
-            for (Signature signature : packageInfo.signatures) {
-                try {
-                    MessageDigest md = MessageDigest.getInstance("SHA");
-                    md.update(signature.toByteArray());
-                    return android.util.Base64.encodeToString(md.digest(), android.util.Base64.NO_WRAP);
-                } catch (NoSuchAlgorithmException e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     public void getViewObject() {
@@ -91,19 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-/*
-        mBottomNV = findViewById(R.id.nav_view);
-        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){ //NavigationItemSelected
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem){
-                BottomNavigate(menuItem.getItemId());
-                return true;
-            }
-        });
-
-        mBottomNV.setSelectedItemId(R.id.navigation_2);*/
-        /*
+    /*
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -153,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-/*
+
     private void BottomNavigate(int id){ //BottomNavigation 페이지 변경
         String tag = String.valueOf(id);
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -182,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.setPrimaryNavigationFragment(fragment);
         fragmentTransaction.setReorderingAllowed(true);
         fragmentTransaction.commitNow();
-    }*/
+    }
 
     // 아래 방식으로 했을 때 작동 왜 안하는지 알아내기!!!
     /*
