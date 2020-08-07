@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,10 +54,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mBottomNV.setSelectedItemId(R.id.navigation_2);
-
-        this.getViewObject();
-        this.initListener();
     }
+
 
     public void getViewObject() {
         btnScheduling = (Button) findViewById(R.id.scheduling);
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     /*
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -90,31 +91,32 @@ public class MainActivity extends AppCompatActivity {
         btn_kakao_login_out = (Button)findViewById(R.id.btn_kakao_login_out);
         btn_google_login_out = (Button)findViewById(R.id.btn_google_login_out);
 
-        btn_kakao_login_out.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                UserManagement.getInstance()
-                        .requestUnlink(new UnLinkResponseCallback() {
-                            @Override
-                            public void onSessionClosed(ErrorResult errorResult) {
-                                Log.e("KAKAO_API", "세션이 닫혀 있음: " + errorResult);
-                            }
+         btn_kakao_login_out.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        UserManagement.getInstance()
+                                .requestUnlink(new UnLinkResponseCallback() {
+                                    @Override
+                                    public void onSessionClosed(ErrorResult errorResult) {
+                                        Log.e("KAKAO_API", "세션이 닫혀 있음: " + errorResult);
+                                    }
 
-                            @Override
-                            public void onFailure(ErrorResult errorResult) {
-                                Log.e("KAKAO_API", "연결 끊기 실패: " + errorResult);
+                                    @Override
+                                    public void onFailure(ErrorResult errorResult) {
+                                        Log.e("KAKAO_API", "연결 끊기 실패: " + errorResult);
 
-                            }
-                            @Override
-                            public void onSuccess(Long result) {
-                                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                                Log.i("KAKAO_API", "연결 끊기 성공. id: " + result);
-                                startActivity(intent);
-                            }
-                        });
+                                    }
+                                    @Override
+                                    public void onSuccess(Long result) {
+                                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                                        Log.i("KAKAO_API", "연결 끊기 성공. id: " + result);
+                                        startActivity(intent);
+                                    }
+                                });
 
-            }
-        });
+                    }
+                });
+
         btn_google_login_out.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -170,7 +172,6 @@ public class MainActivity extends AppCompatActivity {
                 GoogleLogout();
                 break;
         }
->>>>>>> Stashed changes
     }
 
     private void GoogleLogout() {
