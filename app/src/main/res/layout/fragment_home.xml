@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/local_name"
+        android:id="@+id/choice_locale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

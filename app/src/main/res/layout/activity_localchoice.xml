@@ -23,6 +23,7 @@
         android:text="여행하고 싶은 지역을 선택해주세요."
         android:textSize="20dp" />
     <Button
+        android:id="@+id/gyeongsang_north"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -31,12 +32,40 @@
         android:text="경상북도"
         android:textSize="30dp"/>
     <Button
+        android:id="@+id/gyeongsang_south"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="경상남도"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/gyeongsang_busan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="부산광역시"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/gyeongsang_daegu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="대구광역시"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/gyeongsang_ulsan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="울산광역시"
         android:textSize="30dp"/>
 
 </LinearLayout>

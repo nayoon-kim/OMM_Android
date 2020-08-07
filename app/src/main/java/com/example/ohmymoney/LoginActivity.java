@@ -24,7 +24,6 @@ import com.kakao.util.OptionalBoolean;
 import com.kakao.util.exception.KakaoException;
 
 public class LoginActivity extends AppCompatActivity {
-    private Button btn_custom_login_out;
     private SessionCallback sessionCallback = new SessionCallback();
     Session session;
 
@@ -35,20 +34,6 @@ public class LoginActivity extends AppCompatActivity {
 
         session = Session.getCurrentSession();
         session.addCallback(sessionCallback);
-
-        btn_custom_login_out.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                UserManagement.getInstance()
-                        .requestLogout(new LogoutResponseCallback() {
-                            @Override
-                            public void onCompleteLogout() {
-                                Toast.makeText(LoginActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-            }
-        });
-
     }
 
     @Override
@@ -63,10 +48,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
         // 카카오톡|스토리 간편로그인 실행 결과를 받아서 SDK로 전달
         if(Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)){
+            super.onActivityResult(requestCode, resultCode, data);
             return;
         }
-
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public class SessionCallback implements ISessionCallback {
@@ -103,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(MeV2Response result) {
                             Log.e("KAKAO_API", "사용자 아이디: " + result.getId());
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
                             UserAccount kakaoAccount = result.getKakaoAccount();
                             if(kakaoAccount != null){
@@ -132,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                                     // 프로필 획득 불가
                                 }
                             }
+                            startActivity(intent);
                         }
                     });
         }
