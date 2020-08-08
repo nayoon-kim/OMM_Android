@@ -34,7 +34,7 @@ public class NumberActivity extends Activity {
 
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getApplicationContext(), BudgetActivity.class);
+                Intent i = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(i);
             }
         });

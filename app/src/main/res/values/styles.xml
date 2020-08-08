@@ -16,7 +16,8 @@
 
     <style name="ChoiceChipStyle">
         <item name="android:checkable">true</item>
-        <item name="chipIconVisible">false</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipIcon">@drawable/ic_favorite_border_24px</item>
         <item name="closeIconVisible">false</item>
     </style>
 </resources>

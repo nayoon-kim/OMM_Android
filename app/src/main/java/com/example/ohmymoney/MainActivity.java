@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         btnBudget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BudgetActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NumberActivity.class);
                 startActivity(intent);
             }
         });
